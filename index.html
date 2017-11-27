@@ -22,7 +22,15 @@
 			se debe hacer de la siguiente manera.
 			Nota: En este caso ya no es necesario utilizar {{}}
 		-->
-		<a v-bind:href="url" target="_blank">{{ pagina }}</a>
+		<!-- <a v-bind:href="url" target="_blank">{{ pagina }}</a> -->
+
+		<!--
+			Otra forma de darle solución al mismo problema es de la
+			siguiente manera: Podemos omitir escribir lo siguiente
+			antes del atributo 'v-bind', con sólo anteponer ':' Vue
+			ya entiende que se trata de un atributo especial.
+		-->
+		<a :href="url" target="_blank">{{ pagina }}</a>
 	</div>
 	
 	<script src="https://unpkg.com/vue"></script>
