@@ -8,6 +8,14 @@
 <body>
 	<div id="app">
 		Hola {{ nombre }}
+		<!-- <a href="https://google.com" target="_blank">Ir a Google</a> -->
+		<!--
+			No podemos escribir variables de Vue directamente en los atributos
+			de un elemento HTML, en este caso nos dará error al tratar de utilizar
+			la variable 'url' en el atributo 'href' pero si podemos utilizar
+			la variable 'pagina' dentro del contenido de la etiqueta.
+		-->
+		<a href="{{ url }}" target="_blank">{{ pagina }}</a>
 	</div>
 	
 	<script src="https://unpkg.com/vue"></script>
