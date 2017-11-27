@@ -15,7 +15,14 @@
 			la variable 'url' en el atributo 'href' pero si podemos utilizar
 			la variable 'pagina' dentro del contenido de la etiqueta.
 		-->
-		<a href="{{ url }}" target="_blank">{{ pagina }}</a>
+		<!-- <a href="{{ url }}" target="_blank">{{ pagina }}</a> -->
+
+		<!--
+			Para poder utilizar variables de Vue en los atributos de un elemento
+			se debe hacer de la siguiente manera.
+			Nota: En este caso ya no es necesario utilizar {{}}
+		-->
+		<a v-bind:href="url" target="_blank">{{ pagina }}</a>
 	</div>
 	
 	<script src="https://unpkg.com/vue"></script>
@@ -38,7 +45,9 @@
 				/**
 				 * Le indicamos que la variable nombre, va a tener el valor 'Yomar'
 				 */
-				nombre: 'Yomar'
+				nombre: 'Yomar',
+				url: 'https://google.com',
+				pagina: 'Google'
 			}
 		})
 	</script>
