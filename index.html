@@ -6,7 +6,33 @@
 	<title>Hola Mundo Vue.js</title>
 </head>
 <body>
+	<div id="app">
+		Hola {{ nombre }}
+	</div>
 	
 	<script src="https://unpkg.com/vue"></script>
+	<script type="text/javascript">
+		/**
+		 * Creamos un objeto de tipo Vue y le tenemos que pasar un
+		 * objeto como parametro.
+		 */
+		let app = new Vue({
+			/**
+			 * Obtiene el elemento con id = 'app'
+			 */
+			el: '#app',
+			/**
+			 * Objeto con key-value que va a contener todas las variables que
+			 * queremos que reemplace dentro del elemento definido anteriormente,
+			 * en este caso '#app'
+			 */
+			data: {
+				/**
+				 * Le indicamos que la variable nombre, va a tener el valor 'Yomar'
+				 */
+				nombre: 'Yomar'
+			}
+		})
+	</script>
 </body>
 </html>
